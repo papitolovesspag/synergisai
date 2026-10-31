@@ -42,7 +42,7 @@ To verify this mission-critical application without facade or tautological tests
 ├────────────────────────────────────────────────────────────────────────────────────────┤
 │  TIER 2: BOUNDARY & CORNER CASES (10 Assertions)                                       │
 │  ▶ Exact cardinality, negative constraints, viewport extremes, and stress boundaries   │
-│    E2E-T2-01: Exactly 1 Founder (Charles)     E2E-T2-06: Exactly 3 Pricing Tiers   │
+│    E2E-T2-01: Exactly 1 Founder (Chukwuka)     E2E-T2-06: Exactly 3 Pricing Tiers   │
 │    E2E-T2-02: Zero Accelerator Mentions (0)           E2E-T2-07: 320px vs 3840px Extremes │
 │    E2E-T2-03: Exactly 1 Business Email (tower@...)    E2E-T2-08: Rapid Theme Switch Stress│
 │    E2E-T2-04: Exactly 1 Phone (+2349076786951)     E2E-T2-09: Empty Form Validation    │
@@ -162,12 +162,12 @@ To verify this mission-critical application without facade or tautological tests
 ### Feature 9: Section 4: About Us (Mission Statement & Single Founder Bio)
 - **E2E-T1-F9-01**: About Us section contains clear mega-project infrastructure mission statement.
 - **E2E-T1-F9-02**: About Us section contains dedicated placeholder for founder portrait / avatar image.
-- **E2E-T1-F9-03**: Founder biography highlights civil engineering and mega-project optimization credentials (Charles).
+- **E2E-T1-F9-03**: Founder biography highlights civil engineering and mega-project optimization credentials (Chukwuka).
 - **E2E-T1-F9-04**: About Us section contains zero secondary co-founders, advisory boards, or team profile arrays.
 - **E2E-T1-F9-05**: About Us section copy is completely free of startup accelerator or incubator mentions.
 
 ### Feature 10: Section 5: Contact Us & Enterprise RFP Inquiry Form
-- **E2E-T1-F10-01**: Contact Us section displays approved official business email placeholder (`charles@synergisai.site`).
+- **E2E-T1-F10-01**: Contact Us section displays approved official business email placeholder (`chukwuka@synergis.site`).
 - **E2E-T1-F10-02**: Contact Us section displays approved operations dispatch telephone number (`+2349076786951`).
 - **E2E-T1-F10-03**: Section renders comprehensive enterprise RFP intake form (Name, Work Email, Project CapEx, Scope).
 - **E2E-T1-F10-04**: Inquiry form features submission handler (`onSubmit`) and dedicated dispatch button.
@@ -193,9 +193,9 @@ To verify this mission-critical application without facade or tautological tests
 
 | Test ID | Boundary Scope | Verification Method | Expected Observable Condition |
 |:---|:---|:---|:---|
-| **E2E-T2-01** | Exact Founder Cardinality | Regex scan on About Us component for founder names, co-founders, and executive titles. | Exactly 1 founder profile (`Charles`), 0 co-founders, 0 secondary bios. |
+| **E2E-T2-01** | Exact Founder Cardinality | Regex scan on About Us component for founder names, co-founders, and executive titles. | Exactly 1 founder profile (`Chukwuka`), 0 co-founders, 0 secondary bios. |
 | **E2E-T2-02** | Zero Accelerators | Case-insensitive regex scan across `src/` and `public/` for Y Combinator, Techstars, accelerators, incubators. | Exactly 0 matches across the entire codebase. |
-| **E2E-T2-03** | Exact Email Cardinality | Extraction of published email addresses in Contact Us section. | Exactly 1 unique email placeholder: `charles@synergisai.site`. |
+| **E2E-T2-03** | Exact Email Cardinality | Extraction of published email addresses in Contact Us section. | Exactly 1 unique email placeholder: `chukwuka@synergis.site`. |
 | **E2E-T2-04** | Exact Phone Cardinality | Extraction and normalization of telephone numbers in Contact Us. | Exactly 1 unique normalized phone number: `+2349076786951`. |
 | **E2E-T2-05** | Strict AWS Neutrality | Recursive scan of all source files for AWS, S3, EC2, Lambda, SageMaker, DynamoDB. | Exactly 0 matches across all source files. |
 | **E2E-T2-06** | Pricing Tiers Exactness | Extraction of distinct pricing tier cards and tier headers. | Exactly 3 named tiers (`Site Core`, `Enterprise Tower`, `Sovereign Infrastructure`). |

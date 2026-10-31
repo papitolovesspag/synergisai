@@ -68,10 +68,10 @@ export function ContactUs(): JSX.Element {
               <span>OFFICIAL BUSINESS EMAIL</span>
             </div>
             <a
-              href="mailto:charles@synergisai.site"
+              href="mailto:chukwuka@synergis.site"
               className="block font-mono text-base font-bold text-carbon-950 dark:text-chalk-100 hover:text-safety-orange transition-colors selection:bg-safety-orange selection:text-white"
             >
-              charles@synergisai.site
+              chukwuka@synergis.site
             </a>
             <p className="text-xs text-neutral-500 leading-relaxed">
               Encrypted channel for prime contractor RFP packages, BIM model submissions, and

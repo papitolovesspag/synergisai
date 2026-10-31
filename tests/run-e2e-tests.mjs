@@ -1002,8 +1002,8 @@ function runTier1() {
       }
     );
 
-    // E2E-T1-F9-03: Founder biography credentials (Charles)
-    const hasFounder = aboutContent.includes("Charles");
+    // E2E-T1-F9-03: Founder biography credentials (Chukwuka)
+    const hasFounder = aboutContent.includes("Chukwuka");
     const hasCredentials = aboutContent.includes("Chief Systems") ||
       aboutContent.includes("Logistics") ||
       aboutContent.includes("Optimization") ||
@@ -1014,10 +1014,10 @@ function runTier1() {
     assertTest(
       "tier1",
       "E2E-T1-F9-03",
-      "Founder biography highlights civil engineering and mega-project optimization credentials (Charles)",
+      "Founder biography highlights civil engineering and mega-project optimization credentials (Chukwuka)",
       Boolean(hasFounder && hasCredentials),
       {
-        expected: "Charles with engineering credentials and executive title",
+        expected: "Chukwuka with engineering credentials and executive title",
         observed: `Name: ${hasFounder}, Credentials: ${hasCredentials}`,
         file: aboutRes.path || "src/components/sections/AboutUs.tsx",
         note: "Executive credibility established without accelerator tropes",
@@ -1077,10 +1077,10 @@ function runTier1() {
     assertTest(
       "tier1",
       "E2E-T1-F10-01",
-      "Contact Us section displays approved official business email placeholder (charles@synergisai.site)",
-      uniqueEmails.includes("charles@synergisai.site") || emailMatches.includes("charles@synergisai.site"),
+      "Contact Us section displays approved official business email placeholder (chukwuka@synergis.site)",
+      uniqueEmails.includes("chukwuka@synergis.site") || emailMatches.includes("chukwuka@synergis.site"),
       {
-        expected: "charles@synergisai.site displayed in contact details",
+        expected: "chukwuka@synergis.site displayed in contact details",
         observed: `Emails found: [${uniqueEmails.join(", ")}]`,
         file: contactRes.path || "src/components/sections/ContactUs.tsx",
         note: "Official encrypted intake email channel verified",
@@ -1365,13 +1365,13 @@ function runTier2() {
       ? (extractSectionContent(aboutRes.content, "about") || aboutRes.content || "")
       : (aboutRes.content || "");
 
-    const hasCharles = aboutContent.includes("Charles");
+    const hasChukwuka = aboutContent.includes("Chukwuka");
     const coFounderMatches = aboutContent.match(/\b(co-founder|cofounder|co-founders|cofounders)\b/gi) || [];
     const secondaryExecMatches = aboutContent.match(/\b(Co-CEO|Chief Technology Officer|CTO|COO|CFO)\b/g) || [];
-    const founderNameCount = (aboutContent.match(/\bCharles\b/g) || []).length;
+    const founderNameCount = (aboutContent.match(/\bChukwuka\b/g) || []).length;
 
     const passed = Boolean(
-      hasCharles &&
+      hasChukwuka &&
       coFounderMatches.length === 0 &&
       secondaryExecMatches.length === 0 &&
       founderNameCount >= 1
@@ -1380,11 +1380,11 @@ function runTier2() {
     assertTest(
       "tier2",
       "E2E-T2-01",
-      "About Us section contains EXACTLY ONE founder (Charles) with ZERO co-founders or team cards",
+      "About Us section contains EXACTLY ONE founder (Chukwuka) with ZERO co-founders or team cards",
       passed,
       {
-        expected: "Exactly 1 founder profile (Charles), 0 co-founders, 0 secondary executive bios",
-        observed: `Charles: ${hasCharles}, Co-founder mentions: ${coFounderMatches.length}, Secondary execs: ${secondaryExecMatches.length}`,
+        expected: "Exactly 1 founder profile (Chukwuka), 0 co-founders, 0 secondary executive bios",
+        observed: `Chukwuka: ${hasChukwuka}, Co-founder mentions: ${coFounderMatches.length}, Secondary execs: ${secondaryExecMatches.length}`,
         file: aboutRes.path || "src/components/sections/AboutUs.tsx",
         note: "Single founder requirement verified with zero team dilution",
       }
@@ -1446,15 +1446,15 @@ function runTier2() {
     const publishedContent = contactContent.replace(/placeholder=["'][^"']*["']/gi, "");
     const allEmails = publishedContent.match(/[\w.-]+@[\w.-]+\.\w+/g) || [];
     const uniqueEmails = [...new Set(allEmails)];
-    const exactlyOneEmail = uniqueEmails.length === 1 && uniqueEmails[0] === "charles@synergisai.site";
+    const exactlyOneEmail = uniqueEmails.length === 1 && uniqueEmails[0] === "chukwuka@synergis.site";
 
     assertTest(
       "tier2",
       "E2E-T2-03",
-      "Contact Us section contains EXACTLY ONE official business email placeholder (charles@synergisai.site)",
+      "Contact Us section contains EXACTLY ONE official business email placeholder (chukwuka@synergis.site)",
       exactlyOneEmail,
       {
-        expected: "Exactly 1 unique email placeholder: charles@synergisai.site",
+        expected: "Exactly 1 unique email placeholder: chukwuka@synergis.site",
         observed: `Found ${uniqueEmails.length} unique emails: [${uniqueEmails.join(", ")}]`,
         file: contactRes.path || "src/components/sections/ContactUs.tsx",
         note: "Single email cardinality verified without secondary mailboxes",

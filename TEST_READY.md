@@ -75,9 +75,9 @@ In accordance with the **Progressive Testability** protocol, the pending asserti
 - [x] **Single-Page Sequencing**: All 5 sections (`#home`, `#how-it-works`, `#pricing`, `#about`, `#contact`) rendered in strict sequence with `scroll-mt-24` navbar clearance.
 - [x] **Minimalist Industrial Theming**: Obsidian dark default + chalk light mode via `next-themes`, high contrast `#FF5F15` safety orange accents, chamfered styling.
 - [x] **Brand Assets**: Custom geometric control tower SVG emblem (`BrandLogo.tsx`), valid favicon assets in `public/` (> 50B), and Next.js layout metadata linkage.
-- [x] **Single Founder Cardinality**: Exactly 1 founder profile (`Charles`, Chief Systems Architect) with bio, image placeholder, and 0 co-founders.
+- [x] **Single Founder Cardinality**: Exactly 1 founder profile (`Chukwuka`, Chief Systems Architect) with bio, image placeholder, and 0 co-founders.
 - [x] **Zero Accelerator Mentions**: Absolute 0 occurrences of Y Combinator, Techstars, accelerators, or incubators across entire codebase.
-- [x] **Single Contact Channel Cardinality**: Exactly 1 official business email (`charles@synergisai.site`) and exactly 1 telephone number (`+2349076786951`).
+- [x] **Single Contact Channel Cardinality**: Exactly 1 official business email (`chukwuka@synergis.site`) and exactly 1 telephone number (`+2349076786951`).
 - [x] **AWS Cloud Neutrality**: Absolute 0 promotional occurrences of AWS, Amazon Web Services, S3, EC2, Lambda, SageMaker, DynamoDB.
 - [x] **Pricing Tiers Exactness**: Exactly 3 realistic mega-project tiers (`Site Core`, `Enterprise Tower`, `Sovereign Infrastructure`).
 - [x] **Interactive Consultation Intake**: Enterprise RFP form with CapEx scope, contact fields, and transmission acknowledgement state.
