@@ -1002,8 +1002,8 @@ function runTier1() {
       }
     );
 
-    // E2E-T1-F9-03: Founder biography credentials (Uju)
-    const hasFounder = aboutContent.includes("Uju");
+    // E2E-T1-F9-03: Founder biography credentials (Charles)
+    const hasFounder = aboutContent.includes("Charles");
     const hasCredentials = aboutContent.includes("Chief Systems") ||
       aboutContent.includes("Logistics") ||
       aboutContent.includes("Optimization") ||
@@ -1014,10 +1014,10 @@ function runTier1() {
     assertTest(
       "tier1",
       "E2E-T1-F9-03",
-      "Founder biography highlights civil engineering and mega-project optimization credentials (Uju)",
+      "Founder biography highlights civil engineering and mega-project optimization credentials (Charles)",
       Boolean(hasFounder && hasCredentials),
       {
-        expected: "Uju with engineering credentials and executive title",
+        expected: "Charles with engineering credentials and executive title",
         observed: `Name: ${hasFounder}, Credentials: ${hasCredentials}`,
         file: aboutRes.path || "src/components/sections/AboutUs.tsx",
         note: "Executive credibility established without accelerator tropes",
@@ -1077,10 +1077,10 @@ function runTier1() {
     assertTest(
       "tier1",
       "E2E-T1-F10-01",
-      "Contact Us section displays approved official business email placeholder (uju@synergisai.site)",
-      uniqueEmails.includes("uju@synergisai.site") || emailMatches.includes("uju@synergisai.site"),
+      "Contact Us section displays approved official business email placeholder (charles@synergisai.site)",
+      uniqueEmails.includes("charles@synergisai.site") || emailMatches.includes("charles@synergisai.site"),
       {
-        expected: "uju@synergisai.site displayed in contact details",
+        expected: "charles@synergisai.site displayed in contact details",
         observed: `Emails found: [${uniqueEmails.join(", ")}]`,
         file: contactRes.path || "src/components/sections/ContactUs.tsx",
         note: "Official encrypted intake email channel verified",
@@ -1088,15 +1088,15 @@ function runTier1() {
     );
 
     // E2E-T1-F10-02: Exactly one phone number placeholder
-    const hasPhone = contactContent.includes("+2347042350852") || contactContent.includes("2347042350852");
+    const hasPhone = contactContent.includes("+2349076786951") || contactContent.includes("2349076786951");
     assertTest(
       "tier1",
       "E2E-T1-F10-02",
-      "Contact Us section displays approved operations dispatch telephone number (+2347042350852)",
+      "Contact Us section displays approved operations dispatch telephone number (+2349076786951)",
       Boolean(hasPhone),
       {
-        expected: "+2347042350852 displayed in contact details",
-        observed: hasPhone ? "+2347042350852 detected" : "Approved phone placeholder missing",
+        expected: "+2349076786951 displayed in contact details",
+        observed: hasPhone ? "+2349076786951 detected" : "Approved phone placeholder missing",
         file: contactRes.path || "src/components/sections/ContactUs.tsx",
         note: "24/7 critical corridor engineering support hotline confirmed",
       }
@@ -1365,13 +1365,13 @@ function runTier2() {
       ? (extractSectionContent(aboutRes.content, "about") || aboutRes.content || "")
       : (aboutRes.content || "");
 
-    const hasUju = aboutContent.includes("Uju");
+    const hasCharles = aboutContent.includes("Charles");
     const coFounderMatches = aboutContent.match(/\b(co-founder|cofounder|co-founders|cofounders)\b/gi) || [];
     const secondaryExecMatches = aboutContent.match(/\b(Co-CEO|Chief Technology Officer|CTO|COO|CFO)\b/g) || [];
-    const founderNameCount = (aboutContent.match(/\bUju\b/g) || []).length;
+    const founderNameCount = (aboutContent.match(/\bCharles\b/g) || []).length;
 
     const passed = Boolean(
-      hasUju &&
+      hasCharles &&
       coFounderMatches.length === 0 &&
       secondaryExecMatches.length === 0 &&
       founderNameCount >= 1
@@ -1380,11 +1380,11 @@ function runTier2() {
     assertTest(
       "tier2",
       "E2E-T2-01",
-      "About Us section contains EXACTLY ONE founder (Uju) with ZERO co-founders or team cards",
+      "About Us section contains EXACTLY ONE founder (Charles) with ZERO co-founders or team cards",
       passed,
       {
-        expected: "Exactly 1 founder profile (Uju), 0 co-founders, 0 secondary executive bios",
-        observed: `Uju: ${hasUju}, Co-founder mentions: ${coFounderMatches.length}, Secondary execs: ${secondaryExecMatches.length}`,
+        expected: "Exactly 1 founder profile (Charles), 0 co-founders, 0 secondary executive bios",
+        observed: `Charles: ${hasCharles}, Co-founder mentions: ${coFounderMatches.length}, Secondary execs: ${secondaryExecMatches.length}`,
         file: aboutRes.path || "src/components/sections/AboutUs.tsx",
         note: "Single founder requirement verified with zero team dilution",
       }
@@ -1446,15 +1446,15 @@ function runTier2() {
     const publishedContent = contactContent.replace(/placeholder=["'][^"']*["']/gi, "");
     const allEmails = publishedContent.match(/[\w.-]+@[\w.-]+\.\w+/g) || [];
     const uniqueEmails = [...new Set(allEmails)];
-    const exactlyOneEmail = uniqueEmails.length === 1 && uniqueEmails[0] === "uju@synergisai.site";
+    const exactlyOneEmail = uniqueEmails.length === 1 && uniqueEmails[0] === "charles@synergisai.site";
 
     assertTest(
       "tier2",
       "E2E-T2-03",
-      "Contact Us section contains EXACTLY ONE official business email placeholder (uju@synergisai.site)",
+      "Contact Us section contains EXACTLY ONE official business email placeholder (charles@synergisai.site)",
       exactlyOneEmail,
       {
-        expected: "Exactly 1 unique email placeholder: uju@synergisai.site",
+        expected: "Exactly 1 unique email placeholder: charles@synergisai.site",
         observed: `Found ${uniqueEmails.length} unique emails: [${uniqueEmails.join(", ")}]`,
         file: contactRes.path || "src/components/sections/ContactUs.tsx",
         note: "Single email cardinality verified without secondary mailboxes",
@@ -1478,15 +1478,15 @@ function runTier2() {
     const phoneMatches = contactContent.match(phoneRegex) || [];
     const normalizedPhones = [...new Set(phoneMatches.map((p) => p.replace(/\D/g, "")))];
 
-    const passed = normalizedPhones.length === 1 && (normalizedPhones[0] === "2347042350852" || normalizedPhones[0] === "07042350852");
+    const passed = normalizedPhones.length === 1 && (normalizedPhones[0] === "2349076786951" || normalizedPhones[0] === "09076786951");
 
     assertTest(
       "tier2",
       "E2E-T2-04",
-      "Contact Us section contains EXACTLY ONE telephone number placeholder (+2347042350852)",
+      "Contact Us section contains EXACTLY ONE telephone number placeholder (+2349076786951)",
       passed,
       {
-        expected: "Exactly 1 unique normalized phone number (+2347042350852)",
+        expected: "Exactly 1 unique normalized phone number (+2349076786951)",
         observed: `Found ${normalizedPhones.length} unique phones: [${phoneMatches.join(", ")}]`,
         file: contactRes.path || "src/components/sections/ContactUs.tsx",
         note: "Single phone cardinality verified",

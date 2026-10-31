@@ -68,10 +68,10 @@ export function ContactUs(): JSX.Element {
               <span>OFFICIAL BUSINESS EMAIL</span>
             </div>
             <a
-              href="mailto:uju@synergisai.site"
+              href="mailto:charles@synergisai.site"
               className="block font-mono text-base font-bold text-carbon-950 dark:text-chalk-100 hover:text-safety-orange transition-colors selection:bg-safety-orange selection:text-white"
             >
-              uju@synergisai.site
+              charles@synergisai.site
             </a>
             <p className="text-xs text-neutral-500 leading-relaxed">
               Encrypted channel for prime contractor RFP packages, BIM model submissions, and
@@ -89,10 +89,10 @@ export function ContactUs(): JSX.Element {
               <span>OPERATIONS DISPATCH TELEPHONE</span>
             </div>
             <a
-              href="tel:+2347042350852"
+              href="tel:+2349076786951"
               className="block font-mono text-base font-bold text-carbon-950 dark:text-chalk-100 hover:text-safety-orange transition-colors selection:bg-safety-orange selection:text-white"
             >
-              +2347042350852
+              +2349076786951
             </a>
             <p className="text-xs text-neutral-500 leading-relaxed">
               24/7 mission-critical operations dispatch for active mega-corridor incidents and
